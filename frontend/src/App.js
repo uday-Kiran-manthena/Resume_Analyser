@@ -12,7 +12,7 @@ function App() {
       <header className="App-header">
         <h1>
           <FileText size={40} />
-          Resume Analyzer AI
+          Resume Analyser AI
         </h1>
       </header>
 
