@@ -55,7 +55,9 @@ exports.uploadResume = async (req, res) => {
       JSON.stringify(soft_skills || []),
       JSON.stringify(projects || []),
       JSON.stringify(certifications || []),
-      resume_rating,
+      // --- THIS IS THE FIX ---
+      // We parse the rating as a number and round it to the nearest whole number.
+      Math.round(parseFloat(resume_rating)),
       improvement_areas,
       JSON.stringify(upskill_suggestions || []),
     ];
